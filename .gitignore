@@ -1,0 +1,10 @@
+node_modules
+*.log
+.DS_Store
+errorShots
+coverage
+.idea
+build
+
+!gruntfile.js
+!index.js
