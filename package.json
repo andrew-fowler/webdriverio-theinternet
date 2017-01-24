@@ -1,5 +1,5 @@
 {
-  "name": "webdriverio-test",
+  "name": "webdriverio-theinternet",
   "version": "1.0.0",
   "description": "Example webdriverio usage",
   "main": "wdio.conf.js",
