@@ -45,13 +45,13 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 10,
         //
         browserName: 'firefox',
         platform: 'Windows 10'
     },
     {
-        maxInstances: 5,
+        maxInstances: 10,
         browserName: 'chrome',
         platform: 'Windows 10'
     }],
@@ -74,7 +74,7 @@ exports.config = {
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
-    bail: 0,
+    bail: 1,
     //
     // Saves a screenshot to a given path if a command fails.
     screenshotPath: './errorShots/',
@@ -155,7 +155,8 @@ exports.config = {
     // Gets executed before test execution begins. At this point you can access all global
     // variables, such as `browser`. It is the perfect place to define custom commands.
      before: function (capabilities, specs) {
-         //browser.windowHandleMaximize();
+         browser.windowHandleMaximize();
+         browser.timeoutsImplicitWait(15000);
      }
     //
     // Hook that gets executed before the suite starts

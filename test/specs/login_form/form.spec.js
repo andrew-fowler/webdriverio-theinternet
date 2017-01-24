@@ -2,7 +2,7 @@
  * Created by andrewfowler on 1/23/17.
  */
 var expect = require('chai').expect;
-var FormPage = require('../pageobjects/form.page');
+var FormPage = require('../../pageobjects/form.page');
 
 describe('auth form', function () {
     it('should deny access with wrong creds', function () {
