@@ -33,11 +33,18 @@ exports.config = {
     // from the same test should run tests.
     //
     maxInstances: 25,
-    //
-    // If you have trouble getting all important capabilities together, check out the
-    // Sauce Labs platform configurator - a great tool to configure your capabilities:
-    // https://docs.saucelabs.com/reference/platforms-configurator
-    //
+
+    // -- LOCAL --
+    //  Uncomment the capabilities key below if you want to run locally.
+
+    //capabilities: [{
+    //    browserName: 'chrome'
+    //}],
+
+    // -- SAUCELABS --
+    //  Uncomment the services, user, key & capabilities keys below if you want to run on Saucelabs.
+
+
     services: ['sauce'],
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
@@ -62,6 +69,7 @@ exports.config = {
         platform: 'Windows 10'
     }
     ],
+
     //
     // ===================
     // Test Configurations

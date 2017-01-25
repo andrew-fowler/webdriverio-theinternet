@@ -1,10 +1,20 @@
+# Requirements
+
+Saucelabs account or local Chrome install.
+
+NOTE: This is designed for / tested on Mac.  It probably isn't Windows friendly.
+
 # Setup
 
 Clone repo and `npm install` from root.
 
-Set `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` environment variables.
+If you have a Saucelabs account, set `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` environment variables.
 
-If you want to use the run script, run `chmod +x run.sh`
+Or if you want to run locally, install the selenium-standalone package via `"./node_modules/.bin/selenium-standalone" install`
+and run the server using `"./node_modules/.bin/selenium-standalone" start`.  Also, uncomment the LOCAL section, and comment out the SAUCELABS section in `wdio.conf.js`.
+
+If you want to use the run script, make it executable with `chmod +x run.sh`
+
 
 # Execution
 

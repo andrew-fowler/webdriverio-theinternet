@@ -12,7 +12,8 @@
     "wdio-sauce-service": "0.2.4",
     "wdio-mocha-framework": "0.5.8",
     "wdio-allure-reporter": "0.1.2",
-    "allure-commandline": "1.4.23"
+    "allure-commandline": "1.4.23",
+    "selenium-standalone": "5.11.1"
   },
   "devDependencies": {},
   "scripts": {
