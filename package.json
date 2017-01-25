@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "chai": "^3.5.0",
-    "webdriverio": "^4.6.1"
+    "webdriverio": "^4.6.1",
+    "wdio-sauce-service": "0.2.4",
+    "wdio-mocha-framework": "0.5.8"
   },
   "devDependencies": {},
   "scripts": {

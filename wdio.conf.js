@@ -54,7 +54,14 @@ exports.config = {
         maxInstances: 10,
         browserName: 'chrome',
         platform: 'Windows 10'
-    }],
+    },
+    {
+        maxInstances: 10,
+        browserName: 'internet explorer',
+        version: '11.103',
+        platform: 'Windows 10'
+    }
+    ],
     //
     // ===================
     // Test Configurations

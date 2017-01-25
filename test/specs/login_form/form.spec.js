@@ -4,7 +4,7 @@
 var expect = require('chai').expect;
 var FormPage = require('../../pageobjects/form.page');
 
-describe('auth form', function () {
+describe('The login form', function () {
     it('should deny access with wrong creds', function () {
         FormPage.open();
         FormPage.username.setValue('foo');
