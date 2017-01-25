@@ -37,6 +37,7 @@ exports.config = {
     // -- LOCAL --
     //  Uncomment the capabilities key below if you want to run locally.
 
+    //services: ['selenium-standalone'],
     //capabilities: [{
     //    browserName: 'chrome'
     //}],
