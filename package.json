@@ -17,7 +17,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha"
+    "cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
+    "pretest": "npm run cleanup",
+    "test": "./node_modules/.bin/wdio",
+    "report": "allure generate allure-results && allure report open",
+    "posttest": "npm run report",
+    "postinstall": "./node_modules/.bin/selenium-standalone install"
   },
   "repository": {
     "type": "git",
