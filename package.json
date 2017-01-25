@@ -10,7 +10,9 @@
     "chai": "^3.5.0",
     "webdriverio": "^4.6.1",
     "wdio-sauce-service": "0.2.4",
-    "wdio-mocha-framework": "0.5.8"
+    "wdio-mocha-framework": "0.5.8",
+    "wdio-allure-reporter": "0.1.2",
+    "allure-commandline": "1.4.23"
   },
   "devDependencies": {},
   "scripts": {

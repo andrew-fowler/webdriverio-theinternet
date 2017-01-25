@@ -2,9 +2,12 @@ node_modules
 *.log
 .DS_Store
 errorShots
+allure-report
+allure-results
 coverage
 .idea
 build
+
 
 !gruntfile.js
 !index.js

@@ -74,7 +74,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'silent',
+    logLevel: 'verbose',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -134,12 +134,18 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    // reporters: ['dot'],
+    reporters: ['dot', 'allure'],
+    reporterOptions: {
+        allure: {
+            outputDir: 'allure-results'
+        }
+    },
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        ui: 'bdd'
+        ui: 'bdd',
+        timeout: 99999999
     },
     //
     // =====
@@ -163,7 +169,9 @@ exports.config = {
     // variables, such as `browser`. It is the perfect place to define custom commands.
      before: function (capabilities, specs) {
          browser.windowHandleMaximize();
-         browser.timeoutsImplicitWait(15000);
+         browser.timeouts('implicit', 5000);
+         browser.timeouts('script', 60000);
+         browser.timeouts('page load', 300000);
      }
     //
     // Hook that gets executed before the suite starts
