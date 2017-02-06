@@ -9,6 +9,9 @@ describe('The dropdown form', function () {
         DropdownPage.open();
         DropdownPage.dropdown.selectByValue('1');
 
+        /** NOTE: This is failing on Firefox
+         * https://github.com/tourdedave/the-internet/issues/28
+         */
         expect(DropdownPage.dropdown.getValue()).to.equal('1');
     });
 });
