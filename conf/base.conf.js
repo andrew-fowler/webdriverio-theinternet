@@ -1,4 +1,4 @@
-exports.config = {
+module.exports = {
     
     //
     // ==================
@@ -32,44 +32,44 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 25,
+    maxInstances: 1,
 
     // -- LOCAL --
     //  Uncomment the capabilities key below if you want to run locally.
 
-    //services: ['selenium-standalone'],
-    //capabilities: [{
-    //    browserName: 'chrome'
-    //}],
+    services: ['selenium-standalone'],
+    capabilities: [{
+       browserName: 'chrome'
+    }],
 
     // -- SAUCELABS --
     //  Uncomment the services, user, key & capabilities keys below if you want to run on Saucelabs.
 
 
-    services: ['sauce'],
-    user: process.env.SAUCE_USERNAME,
-    key: process.env.SAUCE_ACCESS_KEY,
-    capabilities: [{
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 10,
-        //
-        browserName: 'firefox',
-        platform: 'Windows 10'
-    },
-    {
-        maxInstances: 10,
-        browserName: 'chrome',
-        platform: 'Windows 10'
-    },
-    {
-        maxInstances: 10,
-        browserName: 'internet explorer',
-        version: '11.103',
-        platform: 'Windows 10'
-    }
-    ],
+    // services: ['sauce'],
+    // user: process.env.SAUCE_USERNAME,
+    // key: process.env.SAUCE_ACCESS_KEY,
+    // capabilities: [{
+    //     // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+    //     // grid with only 5 firefox instances available you can make sure that not more than
+    //     // 5 instances get started at a time.
+    //     maxInstances: 10,
+    //     //
+    //     browserName: 'firefox',
+    //     platform: 'Windows 10'
+    // },
+    // {
+    //     maxInstances: 10,
+    //     browserName: 'chrome',
+    //     platform: 'Windows 10'
+    // },
+    // {
+    //     maxInstances: 10,
+    //     browserName: 'internet explorer',
+    //     version: '11.103',
+    //     platform: 'Windows 10'
+    // }
+    // ],
 
     //
     // ===================
@@ -230,4 +230,4 @@ exports.config = {
     // possible to defer the end of the process using a promise.
     // onComplete: function(exitCode) {
     // }
-}
+};

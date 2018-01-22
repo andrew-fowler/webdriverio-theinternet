@@ -21,6 +21,8 @@
     "cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
     "pretest": "npm run cleanup",
     "test": "./node_modules/.bin/wdio",
+    "test:local": "npm run pretest && ./node_modules/.bin/wdio ./conf/local.conf.js && npm run posttest",
+    "test:sauce": "npm run pretest && ./node_modules/.bin/wdio ./conf/saucelabs.conf.js && npm run posttest",
     "report": "allure generate allure-results && allure report open",
     "posttest": "npm run report",
     "postinstall": "./node_modules/.bin/selenium-standalone install"
