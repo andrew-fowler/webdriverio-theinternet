@@ -16,60 +16,6 @@ module.exports = {
     exclude: [
         // 'path/to/excluded/files'
     ],
-    //
-    // ============
-    // Capabilities
-    // ============
-    // Define your capabilities here. WebdriverIO can run multiple capabilities at the same
-    // time. Depending on the number of capabilities, WebdriverIO launches several test
-    // sessions. Within your capabilities you can overwrite the spec and exclude options in
-    // order to group specific specs to a specific capability.
-    //
-    // First, you can define how many instances should be started at the same time. Let's
-    // say you have 3 different capabilities (Chrome, Firefox, and Safari) and you have
-    // set maxInstances to 1; wdio will spawn 3 processes. Therefore, if you have 10 spec
-    // files and you set maxInstances to 10, all spec files will get tested at the same time
-    // and 30 processes will get spawned. The property handles how many capabilities
-    // from the same test should run tests.
-    //
-    maxInstances: 1,
-
-    // -- LOCAL --
-    //  Uncomment the capabilities key below if you want to run locally.
-
-    services: ['selenium-standalone'],
-    capabilities: [{
-       browserName: 'chrome'
-    }],
-
-    // -- SAUCELABS --
-    //  Uncomment the services, user, key & capabilities keys below if you want to run on Saucelabs.
-
-
-    // services: ['sauce'],
-    // user: process.env.SAUCE_USERNAME,
-    // key: process.env.SAUCE_ACCESS_KEY,
-    // capabilities: [{
-    //     // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-    //     // grid with only 5 firefox instances available you can make sure that not more than
-    //     // 5 instances get started at a time.
-    //     maxInstances: 10,
-    //     //
-    //     browserName: 'firefox',
-    //     platform: 'Windows 10'
-    // },
-    // {
-    //     maxInstances: 10,
-    //     browserName: 'chrome',
-    //     platform: 'Windows 10'
-    // },
-    // {
-    //     maxInstances: 10,
-    //     browserName: 'internet explorer',
-    //     version: '11.103',
-    //     platform: 'Windows 10'
-    // }
-    // ],
 
     //
     // ===================
